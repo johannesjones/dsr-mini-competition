@@ -1,0 +1,34 @@
+
+train_values:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/train_values.csv
+
+train_labels:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/train_labels.csv
+
+preprocessed_data:
+  type: pandas.CSVDataset
+  filepath: data/04_intermediate/preprocessed_data.csv  # Path to save the preprocessed data
+
+test_values:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/test_values.csv
+
+trained_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/trained_model.pkl
+
+evaluation_metrics:
+  type: pandas.JSONDataset
+  filepath: data/04_intermediate/evaluation_metrics.json  # Path to save the evaluation metrics
+
+predictions:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/predictions.csv
+  save_args:
+    index: False
+
+submission:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/submission.csv

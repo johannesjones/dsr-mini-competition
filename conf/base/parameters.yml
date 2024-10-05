@@ -1,0 +1,7 @@
+split_data:
+    test_size: 0.3
+    target_column: damage_grade
+
+
+target: "damage_grade"
+output_filepath: "data/08_reporting/submission.csv"
